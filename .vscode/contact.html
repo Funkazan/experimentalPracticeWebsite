@@ -50,8 +50,17 @@
         </footer>
         <script>
             document.querySelector('.menu-button').addEventListener('click', function() {
-                document.querySelector('.mobile-menu').classList.toggle('active');
+                var mobileMenu = document.querySelector('.mobile-menu');
+                mobileMenu.classList.toggle('active');
+        
+                // Toggle the menu-list based on the active class
+                var menuList = mobileMenu.querySelector('.menu-list');
+                if (mobileMenu.classList.contains('active')) {
+                    menuList.style.display = 'flex';
+                } else {
+                    menuList.style.display = 'none';
+                }
             });
-        </script>        
+        </script>         
     </body>
 </html>
