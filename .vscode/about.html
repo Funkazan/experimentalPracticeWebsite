@@ -21,11 +21,15 @@
         <nav>
             <ul>
                 <li class="dropdown">
-                    <a href="#">Menu</a>
-                    <div class="dropdown-content">
-                        <a href="index.html">Start</a>
-                        <a href="about.html">About Us</a>
-                        <a href="contact.html">Contact</a>
+                    <div class="mobile-menu">
+                        <button class="menu-button">
+                            <i class="fas fa-bars"></i><!--Font awesome hamburger icon-->
+                        </button>
+                        <ul>
+                            <a href="index.html">Start</a>
+                            <a href="about.html">About Us</a>
+                            <a href="contact.html">Contact</a>
+                        </ul>
                     </div>
                 </li>
             </ul>
@@ -42,5 +46,10 @@
         <footer>
             <p>&copy; 2024 MyWebsite. All rights reserved.</p>
         </footer>
+        <script>
+            document.querySelector('.menu-button').addEventListener('click', function() {
+                document.querySelector('.mobile-menu').classList.toggle('active');
+            });
+        </script>        
     </body>
 </html>

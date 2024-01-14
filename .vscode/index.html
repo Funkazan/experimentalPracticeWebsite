@@ -11,6 +11,7 @@
         <meta property="og:description" content="My first website to learn HTML.">
         <meta property="og:image" content="https://img.anime2you.de/2022/10/lycoris-old1.jpg">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <title>My first website</title>
     </head>
     <body>
@@ -21,11 +22,15 @@
         <nav>
             <ul>
                 <li class="dropdown">
-                    <a href="#">Menu</a>
-                    <div class="dropdown-content">
-                        <a href="index.html">Start</a>
-                        <a href="about.html">About Us</a>
-                        <a href="contact.html">Contact</a>
+                    <div class="mobile-menu">
+                        <button class="menu-button">
+                            <i class="fas fa-bars"></i><!--Font awesome hamburger icon-->
+                        </button>
+                        <ul class="menu-list">
+                            <li><a href="index.html">Start</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
                     </div>
                 </li>
             </ul>
@@ -41,5 +46,19 @@
         <footer>
             <p>&copy; 2024 MyWebsite. All rights reserved.</p>
         </footer>
+        <script>
+            document.querySelector('.menu-button').addEventListener('click', function() {
+                var mobileMenu = document.querySelector('.mobile-menu');
+                mobileMenu.classList.toggle('active');
+        
+                // Toggle the menu-list based on the active class
+                var menuList = mobileMenu.querySelector('.menu-list');
+                if (mobileMenu.classList.contains('active')) {
+                    menuList.style.display = 'flex';
+                } else {
+                    menuList.style.display = 'none';
+                }
+            });
+        </script>                      
     </body>
 </html>

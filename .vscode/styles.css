@@ -14,12 +14,16 @@ header img {
     margin-left: 0;
 }
 
+button {
+    font-size: 15px;
+}
+
 /* header 1 styling */
 h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: aquamarine;
-    padding-top: 50px;
-    padding-left: 20px;
+    color: crimson;
+    padding-top: 5px;
+    padding-left: 80px;
     padding-bottom: 50px;
     margin: 0;
 }
@@ -102,4 +106,50 @@ nav a:hover {
 /* Show the dropdowncontent when hovering over the dropdown */
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+/* Styling for the mobile menu */
+.mobile-menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    display: none;    
+}
+
+.menu-list li {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Media query to show/hide the mobile menu based on screen size */
+@media only screen and (max-width:768px) {
+    .mobile-menu {
+        display: flex;
+        align-items: center;
+    }
+    .menu-list {
+        display: none;
+        flex-direction: column;
+    }
+    .mobile-menu.active .menu-list {
+        display: flex;
+    }
 }
