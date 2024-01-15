@@ -11,6 +11,7 @@
         <meta property="og:description" content="My first website to learn HTML.">
         <meta property="og:image" content="https://img.anime2you.de/2022/10/lycoris-old1.jpg">
         <link rel="stylesheet" href="styles.css">
+        <link rel="function" href="function.js">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <title>My first website</title>
     </head>
@@ -20,21 +21,19 @@
             <h1>Welcome to my website</h1>
         </header>
         <nav>
-            <ul>
-                <li class="dropdown">
-                    <div class="mobile-menu">
-                        <button class="menu-button">
-                            <i class="fas fa-bars"></i><!--Font awesome hamburger icon-->
-                        </button>
-                        <ul class="menu-list">
-                            <li><a href="index.html">Start</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+            <li class="dropdown">
+                <div class="mobile-menu">
+                    <button class="menu-button">
+                        <i class="fas fa-bars"></i><!--Font awesome hamburger icon-->
+                    </button>
+                    <ul>
+                        <a href="index.html">Start</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Contact</a>
+                    </ul>
+                </div>
+            </li>
+    </nav>
         <section id="start">
             <h2>Homepage</h2>
             <p>Welcome to my website.</p>

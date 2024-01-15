@@ -150,6 +150,6 @@ nav a:hover {
         flex-direction: column;
     }
     .mobile-menu.active .menu-list {
-        display: flex;
+        display: none;
     }
 }
