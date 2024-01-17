@@ -36,12 +36,35 @@
             </li>
     </nav>
         <section id="start">
-            <h2>Homepage</h2>
-            <p>Welcome to my website.</p>
-            <p>This is an experimental website.</p>
-            <p>The main purpose is to exercise my coding skills..</p>
-            <p>By the way, I really like Lycoris flowers!!</p>
+            <h2>Formular</h2>
         </section>
+        <form>
+            <fieldset name="personal_details">
+                <legend>Personal Details</legend>
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+                <label for="phone"> Phone Number:</label>
+                <input type="tel" id="phone" name="phone"><br>
+            </fieldset>
+            <br>
+            <fieldset name="professional_details">
+                <legend>Professional Details</legend>
+                <label for="occupation">Occupation:</label>
+                <input type="text" id="occupation" name="occupation"><br>
+                <label for="company">Company:</label>
+                <input type="text" id="company" name="company"><br>
+                <label for="start">Start Date:</label>
+                <input type="date" id="start" name="start"><br>
+                <label for="end">End Date:</label>
+                <input type="date" id="end" name="end"><br>
+            </fieldset>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
         <hr>
         <footer>
             <p>&copy; 2024 MyWebsite. All rights reserved.</p>

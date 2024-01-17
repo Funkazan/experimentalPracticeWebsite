@@ -47,7 +47,7 @@ h2 {
 p {
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     color: white;
-    margin-bottom: -8px;
+    margin-bottom: -6px;
     padding-left: 20px;
 }
 
@@ -152,4 +152,16 @@ nav a:hover {
     .mobile-menu.active .menu-list {
         display: none;
     }
+}
+
+/* Styling for the label */
+label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aqua;
+}
+
+/* Styling for the legend */
+legend {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: antiquewhite;
 }
