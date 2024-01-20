@@ -56,12 +56,19 @@ form {
     top: 60px;
     right: 0;
     width: 100%;
-    display: none;    
+    display: none;
+}
+
+.menu-list li {
+    text-align: center;
+    padding: 10px;
 }
 
 .mobile-menu.active .menu-list {
     display: flex; /* Display the menu list when active */
+    flex-direction: column;
 }
+
 
 /* Media query to show/hide the mobile menu based on screen size */
 @media only screen and (max-width: 768px) {
