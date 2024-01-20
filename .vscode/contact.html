@@ -1,44 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="My first Website to learn HTML.">
-        <meta name="keywords" content="HTML, Webdevelopement, learning, experimental, tutorial">
-        <meta name="author" content="Funkazan">
-        <meta name="robots" content="index, follow">
-        <meta property="og:title" content="My first website">
-        <meta property="og:description" content="My first website to learn HTML.">
-        <meta property="og:image" content="https://img.anime2you.de/2022/10/lycoris-old1.jpg">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="function" href="function.js">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <title>My first website</title>
-    </head>
-    <body>
-        <header>
-            <img src="https://img.anime2you.de/2022/10/lycoris-old1.jpg" alt="Website Logo" height="300" width="600">
-            <h1>Welcome to my website</h1>
-        </header>
-        <nav>
-                <li class="dropdown">
-                    <div class="mobile-menu">
-                        <button class="menu-button">
-                            <i class="fas fa-bars"></i><!--Font awesome hamburger icon-->
-                        </button>
-                        <ul>
-                            <a href="index.html">Start</a>
-                            <a href="about.html">About Us</a>
-                            <a href="formular.html">Formular</a>
-                            <a href="contact.html">Contact</a>
-                        </ul>
-                    </div>
-                </li>
-        </nav>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>You can contact me via: </p>
-            <address>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My first Website to learn HTML.">
+    <meta name="keywords" content="HTML, Webdevelopement, learning, experimental, tutorial">
+    <meta name="author" content="Funkazan">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="My first website">
+    <meta property="og:description" content="My first website to learn HTML.">
+    <meta property="og:image" content="https://img.anime2you.de/2022/10/lycoris-old1.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="function.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>My first website</title>
+</head>
+<body class="bg-cover bg-center" style="background-image: url('https://wallpapercave.com/wp/wp6445604.jpg')">
+    <header class="bg-teal-800 h-300">
+        <img src="https://img.anime2you.de/2022/10/lycoris-old1.jpg" alt="Website Logo" class="w-full" style="height: 225px;">
+        <h1 class="h1" style="color: crimson; font-size: 50px;"><b>Welcome to my website</b></h1>
+    </header>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <div class="mobile-menu" style="color: crimson;">
+                    <button class="menu-button" style="color: crimson;">
+                        <i class="fas fa-bars"></i><!-- Font awesome hamburger icon -->
+                    </button>
+                    <ul class="menu-list" style="background-color: crimson; color: black;">
+                        <li><a href="index.html">Start</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="formular.html">Formular</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+        <section id="contact" style="color: crimson;">
+            <h2 class="text-3xl font-bold mb-4">Contact</h2>
+            <p><u>You can contact me via: </u></p>
+        </section>
+            <address id="address" style="color: crimson;">
                 <p>Funkazan</p>
                 <p>X-Street 123</p>
                 <p>00000 X-Town</p>
@@ -47,23 +50,15 @@
                 <p><a href="mailto:xx.xxx@xxx.com">This is just an example</a></p>
             </address>
         </section>
-        <hr>
-        <footer>
+        <hr class="my-4">
+        <footer class="text-left" style="color: crimson;">
             <p>&copy; 2024 MyWebsite. All rights reserved.</p>
         </footer>
         <script>
             document.querySelector('.menu-button').addEventListener('click', function() {
                 var mobileMenu = document.querySelector('.mobile-menu');
                 mobileMenu.classList.toggle('active');
-        
-                // Toggle the menu-list based on the active class
-                var menuList = mobileMenu.querySelector('.menu-list');
-                if (mobileMenu.classList.contains('active')) {
-                    menuList.style.display = 'flex';
-                } else {
-                    menuList.style.display = 'none';
-                }
             });
-        </script>         
+        </script>          
     </body>
 </html>

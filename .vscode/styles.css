@@ -1,117 +1,37 @@
-/* Styling for the header */
-header {
-    background-color: rgba(1, 46, 42, 0);
-    height: 300px;
-    width: 100%;
-    margin: 0;
-}
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-/* Styling for the header image */
-header img {
-    width: 100%;
-    height: 300px;
-    margin-top: 0;
-    margin-left: 0;
-}
-
-button {
-    font-size: 15px;
-}
-
-/* header 1 styling */
-h1 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: crimson;
-    padding-top: 5px;
-    padding-left: 80px;
-    padding-bottom: 50px;
-    margin: 0;
-}
-
-/* Body styling */
-body {
-    background: url('https://wallpapercave.com/wp/wp6445604.jpg') no-repeat center center fixed;
-    background-size: cover;
-    margin: 0; /* Remove default body margin for full coverage */
-    padding: 0; /* Remove default body padding for full coverage */
-}
-
-/* Header 2 styling */
-h2 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: crimson;
-    padding-top: 20px;
-    padding-left: 20px;
-}
-/* Paragraph styling*/
-p {
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-    color: white;
-    margin-bottom: -6px;
-    padding-left: 20px;
-}
-
-
-/* Apply styles to the navigation menu */
-nav ul {
-    list-style-type: none;
-    margin: 0;
+fieldset {
+    border: none;
     padding: 0;
-    overflow: hidden;
-    background-color: #333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Style for the navigation links */
-nav a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+label, input {
+    margin-bottom: 10px;
 }
 
-/* Change color on hover for navigation links */
-nav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Style for the dropdown menu */
-.dropdown {
+/* Add this rule to align labels and inputs vertically in one line */
+label {
+    flex: 1;
     display: inline-block;
+    width: 150px; /* Adjust the width based on your design */
 }
 
-/* Style for the dropdown content */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333; /* Background color for the dopdown*/
-    
+input {
+    flex: 2; /* Adjust the flex value based on your design */
+    width: 100%; /* Take up the remaining width */
 }
 
-/* Style for the dropdown links */
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    display: block;
-    text-decoration: none;
-}
-
-/* Change color on hover for dropdown links */
-.dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Show the dropdowncontent when hovering over the dropdown */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 
 /* Styling for the mobile menu */
 .mobile-menu {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .menu-button {
@@ -129,39 +49,22 @@ nav a:hover {
     background-color: #333;
     position: absolute;
     top: 60px;
-    left: 0;
+    right: 0;
     width: 100%;
     display: none;    
 }
 
-.menu-list li {
-    text-align: center;
-    padding: 10px;
+.mobile-menu.active .menu-list {
+    display: flex; /* Display the menu list when active */
 }
 
 /* Media query to show/hide the mobile menu based on screen size */
-@media only screen and (max-width:768px) {
-    .mobile-menu {
-        display: flex;
-        align-items: center;
-    }
+@media only screen and (max-width: 768px) {
     .menu-list {
         display: none;
         flex-direction: column;
     }
     .mobile-menu.active .menu-list {
-        display: none;
+        display: flex; /* Display the menu list when active */
     }
-}
-
-/* Styling for the label */
-label {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: aqua;
-}
-
-/* Styling for the legend */
-legend {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: antiquewhite;
 }
