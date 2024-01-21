@@ -5,32 +5,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showMenu() {
         mobileMenu.classList.add('active');
-        menuList.style.display = 'flex';
-        menuList.style.flexDirection = 'column'; // Set flex-direction to column
+        menuList.style.opacity = '1';
+        menuList.style.height = 'auto';
     }
 
     function hideMenu() {
         mobileMenu.classList.remove('active');
-        menuList.style.display = 'none';
+        menuList.style.opacity = '0';
+        menuList.style.height = '0';
     }
+
+    // Hide the menu initially
+    hideMenu();
 
     function toggleMenu() {
         mobileMenu.classList.toggle('active');
-
-        // Toggle the menu-list basen on the active class
-        menuList.classList.toggle('show');
-        if (mobileMenu.classList.contains('active')) {
-            menuList.style.flexDirection = 'column'; // Set flex-direction to column when menu is active
-        }
+        var isMenuActive = mobileMenu.classList.contains('active');
+        menuList.style.opacity = isMenuActive ? '1' : '0';
+        menuList.style.height = isMenuActive ? 'auto' : '0';
     }
 
     // Enable click functionality for mobile
     menuButton.addEventListener('click', function () {
-        if (mobileMenu.classList.contains('active')) {
-            hideMenu();
-        } else {
-            showMenu();
-        }
+        toggleMenu();
     });
 
     // Enable hover functionality for desktop

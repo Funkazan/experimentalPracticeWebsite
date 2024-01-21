@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+p {
+    position: fixed;
+}
+
 fieldset {
     border: none;
 }
@@ -60,7 +64,7 @@ form {
     opacity: 0;
     height: 0;
     overflow: hidden;
-    transition: opacity 0.5s ease, height 0.5s ease;
+    transition: opacity 0.3s ease, height 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .menu-list.show {
@@ -76,8 +80,17 @@ form {
     border-bottom: 1px solid #555;
 }
 
+.menu-list.fixed {
+    position: fixed;
+    top: 60px; /* Adjust the top position as needed */
+    width: 100%; /* Ensure the menu takes the full width */
+    box-sizing: border-box;
+}
+
 .mobile-menu.active .menu-list {
     display: flex; /* Display the menu list when active */
+    opacity: 1;
+    height: auto;
 }
 
 
@@ -86,6 +99,10 @@ form {
     .menu-list {
         display: none;
         flex-direction: column;
+        position: fixed; /* Add this line to keep the menu fixed in the viewport */
+        top: 60px; /* Add this line to position the menu at the top of the viewport */
+        width: 100%;
+        box-sizing: border-box;
     }
     .mobile-menu.active .menu-list {
         display: flex; /* Display the menu list when active */
