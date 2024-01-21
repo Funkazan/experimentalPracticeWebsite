@@ -56,23 +56,28 @@ form {
     top: 60px;
     right: 0;
     width: 100%;
-    display: table-column;
     flex-direction: column;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease;
 }
 
-/* slight delay before hiding the menu */
-.menu-list.leave {
-    transition: display 1s ease-out;
+.menu-list.show {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    height: auto;
 }
 
 .menu-list li {
     text-align: center;
     padding: 10px;
+    border-bottom: 1px solid #555;
 }
 
 .mobile-menu.active .menu-list {
     display: flex; /* Display the menu list when active */
-    flex-direction: column;
 }
 
 
