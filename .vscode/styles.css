@@ -56,7 +56,13 @@ form {
     top: 60px;
     right: 0;
     width: 100%;
-    display: none;
+    display: table-column;
+    flex-direction: column;
+}
+
+/* slight delay before hiding the menu */
+.menu-list.leave {
+    transition: display 1s ease-out;
 }
 
 .menu-list li {
